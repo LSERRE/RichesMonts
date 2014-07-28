@@ -1,0 +1,32 @@
+/******************************************************************
+Theme Name: Riches Monts
+Theme URI: http://www.themble.com/bones
+Description: This site was built using the Bones Development Theme. For more information about Bones or to view documentation, you can visit the <a href="https://github.com/eddiemachado/bones/issues" title="Bones Issues">Bones Issues</a> page on Github. You'll want to customize this for your clients with your own information.
+Author: Louis Serre
+Author URI: http://www.louisserre.com
+Version: 1.7
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+
+
+Tous les fichiers CSS se trouvent dans le dossier Library. Le site a été développé en Sass.
+Vous pouvez retrouver une documentation sur les liens suivants:
+
+http://simplebits.com/notebook/2013/11/13/sass-book/
+http://cognition.happycog.com/article/preprocess-this
+http://viget.com/inspire/sass-a-designers-perspective
+http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
+http://css-tricks.com/sass-style-guide/
+http://net.tutsplus.com/tutorials/html-css-techniques/developing-with-sass-and-chrome-devtools/
+
+Vous aurez besoin de ces applications pour compiler le Sass et exporter du css.
+
+CodeKit: (Highly Recommended)
+http://incident57.com/codekit/
+
+Compass App: (Windows / Mac Users)
+http://compass.handlino.com/
+
+******************************************************************/

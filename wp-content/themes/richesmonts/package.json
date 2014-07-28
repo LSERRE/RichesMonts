@@ -1,0 +1,20 @@
+{
+  "name": "richesmonts",
+  "version": "0.0.0",
+  "description": "Riches Monts Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Louis Serre",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "~0.9.0",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "dependencies": {
+    "grunt-contrib-compass": "~0.9.0",
+    "grunt": "~0.4.5"
+  }
+}
