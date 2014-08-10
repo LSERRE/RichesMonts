@@ -121,5 +121,51 @@ jQuery(document).ready(function($) {
     autoSlideInterval: 9000
   });
 
+  $('.toggle-menu-responsive').on( 'click', function( e ){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.responsive-nav').toggleClass('active');
+  } );
+
+  function product_slider(){
+
+    // On page product, resize the same product header if needed
+    var $OtherPostContainer = $('.other_same_post_wrapper');
+    var containerWidth = $OtherPostContainer.width();
+    var totalWidth = 0;
+    $('.other_same_post_article').each( function(){
+      totalWidth += $(this).width();
+      totalWidth += parseInt($(this).css('marginLeft'));
+      totalWidth += parseInt($(this).css('marginRight'));
+    });
+
+    if(containerWidth < totalWidth){
+        $OtherPostContainer.width(totalWidth);
+    }
+
+  }
+
+  $('.next-products').on( 'click', function ( e ){
+    e.preventDefault();
+    var margin = Math.abs(parseInt($('.other_same_post_wrapper').css('marginLeft')));
+    margin += parseInt($('.other_same_post_hidder').width());
+    margin -= 5;
+    margin = - Math.abs(margin);
+    console.log(margin);
+    $('.other_same_post_wrapper').animate({
+        marginLeft: margin +'px'
+      }, 400, 'easeOutCirc');
+  });
+
+  $(window).on('resize', function(){
+    product_slider();
+  });
+
+  product_slider();
+
+
+
+
+
 
 }); /* end of as page load scripts */

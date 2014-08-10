@@ -61,29 +61,6 @@ function custom_post_type_recettes() {
 
 }
 
-// now let's add custom categories (these act like categories)
-register_taxonomy( 'recettes_cat',
-	array('recettes'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-	array('hierarchical' => true,     /* if this is true, it acts like categories */
-		'labels' => array(
-			'name' => __( 'Types de recette', 'bonestheme' ), /* name of the custom taxonomy */
-			'singular_name' => __( 'Type de recette', 'bonestheme' ), /* single taxonomy name */
-			'search_items' =>  __( 'Chercher un type de recette', 'bonestheme' ), /* search title for taxomony */
-			'all_items' => __( 'Tout les types de recette', 'bonestheme' ), /* all title for taxonomies */
-			'parent_item' => __( 'Parent type de recette', 'bonestheme' ), /* parent title for taxonomy */
-			'parent_item_colon' => __( 'Parent type de recette:', 'bonestheme' ), /* parent taxonomy title */
-			'edit_item' => __( 'Modifier le type de recette', 'bonestheme' ), /* edit custom taxonomy title */
-			'update_item' => __( 'Mettre à jour le type de recette', 'bonestheme' ), /* update title for taxonomy */
-			'add_new_item' => __( 'Ajouter un type de recette', 'bonestheme' ), /* add new title for taxonomy */
-			'new_item_name' => __( 'Nouveau type de recette', 'bonestheme' ) /* name title for taxonomy */
-		),
-		'show_admin_column' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => array( 'slug' => 'custom-slug' ),
-	)
-);
-
 // let's create the function for the custom type fromage
 function custom_post_type_fromages() {
 	// creating (registering) the custom type
@@ -274,7 +251,7 @@ function custom_post_type_partenaires() {
 
 }
 
-// now let's add custom categories (these act like categories)
+// now let's add astuces categories
 register_taxonomy( 'astuces_cat',
 	array('astuces'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 	array('hierarchical' => true,     /* if this is true, it acts like categories */
@@ -293,7 +270,53 @@ register_taxonomy( 'astuces_cat',
 		'show_admin_column' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'custom-slug' ),
+		'rewrite' => array( 'slug' => 'astuces_cat' ),
+	)
+);
+
+// now let's add fromages categories
+register_taxonomy( 'fromages_cat',
+	array('fromages'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,     /* if this is true, it acts like categories */
+		'labels' => array(
+			'name' => __( 'Catégories de fromage', 'bonestheme' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Catégorie de fromage', 'bonestheme' ), /* single taxonomy name */
+			'search_items' =>  __( 'Chercher une catégorie', 'bonestheme' ), /* search title for taxomony */
+			'all_items' => __( 'Toutes les catégories ', 'bonestheme' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent catégorie', 'bonestheme' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent catégorie', 'bonestheme' ), /* parent taxonomy title */
+			'edit_item' => __( 'Modifier la catégorie', 'bonestheme' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Mettre à jour la catégorie', 'bonestheme' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Ajouter une catégorie', 'bonestheme' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'Nouvelle catégorie', 'bonestheme' ) /* name title for taxonomy */
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'fromages_cat' ),
+	)
+);
+
+// now let's add recettes categories
+register_taxonomy( 'recettes_cat',
+	array('recettes'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,     /* if this is true, it acts like categories */
+		'labels' => array(
+			'name' => __( 'Catégories de recette', 'bonestheme' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Catégorie de recette', 'bonestheme' ), /* single taxonomy name */
+			'search_items' =>  __( 'Chercher une catégorie', 'bonestheme' ), /* search title for taxomony */
+			'all_items' => __( 'Toutes les catégories ', 'bonestheme' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent catégorie', 'bonestheme' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent catégorie', 'bonestheme' ), /* parent taxonomy title */
+			'edit_item' => __( 'Modifier la catégorie', 'bonestheme' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Mettre à jour la catégorie', 'bonestheme' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Ajouter une catégorie', 'bonestheme' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'Nouvelle catégorie', 'bonestheme' ) /* name title for taxonomy */
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'recettes_cat' ),
 	)
 );
 
@@ -309,6 +332,9 @@ function add_menu_icons_styles() {
     #adminmenu #menu-posts-partenaires div.wp-menu-image:before{
     	content: "\f103";
     }
+    body.login{
+  		background-color: #009fe3;
+	}
 
 </style>
 <?php

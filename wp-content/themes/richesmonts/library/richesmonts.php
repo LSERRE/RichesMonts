@@ -309,6 +309,25 @@ function bones_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
 
+function my_custom_login_logo() {
+     echo '<style type="text/css">
+     	body.login{
+     		background: #009fe3 !important;
+     	}
+        h1 a {
+        	background-image:url('.get_stylesheet_directory_uri().'/library/images/richesmonts-logo.png) !important;
+			width: 200px !important;
+			height: 105px !important;
+			background-size: 200px 105px !important;
+    	}
+    	.login a{
+    		color: #f0f0f0 !important;
+    	}
+
+     </style>';
+}
+add_action('login_head', 'my_custom_login_logo');
+
 
 
 ?>

@@ -78,7 +78,9 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -50px;
+  -ms-transform: translate(-50%,0); /* IE 9 */
+  -webkit-transform: translate(-50%,0); /* Chrome, Safari, Opera */
+  transform: translate(-50%,0);
 }
 .ls-nav a {
   background: #9d9d9c;

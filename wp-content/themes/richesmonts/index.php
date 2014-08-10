@@ -2,7 +2,7 @@
 
 			<div id="content" class="montagneBackground">
 				<div class="container_12">
-					<div id="main-slider" class="liquid-slider main-slider grid_12">
+					<div id="main-slider" class="liquid-slider main-slider">
 						<?php $the_query = new WP_Query( array('post_type' => 'slider', 'showposts' => 3) );
 						if ( $the_query->have_posts() ) {
 							while ( $the_query->have_posts() ) { ?>
@@ -61,12 +61,12 @@
 
 							<?php if (have_posts()) : ?>
 
-								<section class="a-la-une m-all grid_12">
+								<section class="a-la-une m-all">
 									<h2>A la une!</h2>
+									<?php $the_query = new WP_Query( array('post_type' => 'post', 'showposts' => 3) ); ?>
+									<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-									<?php while (have_posts()) : the_post(); ?>
-
-										<article id="post-<?php the_ID(); ?>" class="grid_4 push_4" role="article">
+										<article id="post-<?php the_ID(); ?>" class="grid_4 push_4 fm" role="article">
 											<header>
 												<div class="image-wrapper">
 													<img src="<?php echo get_template_directory_uri(); ?>/library/images/article-small.png" alt="">
@@ -91,7 +91,7 @@
 
 							<?php $the_query = new WP_Query( array('post_type' => 'partenaires', 'showposts' => 5) );
 							if ( $the_query->have_posts() ) { ?>
-								<section class="partenaires grid_12">
+								<section class="partenaires container_12">
 									<div class="outer-center">
 										<div class="inner-center">
 											<h2>Nos partenaires :</h2>

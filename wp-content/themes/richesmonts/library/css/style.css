@@ -75,6 +75,7 @@ template {
  */
 html {
   font-family: sans-serif;
+  overflow-x: hidden;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -1248,9 +1249,10 @@ body {
   font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
-  background-color: #eaedf2;
-  -webkit-font-smoothing: antialiased; }
+  color: #575756;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1281,35 +1283,34 @@ style a page via class
   z-index: 2;
 }
 .infos-slider h2{
-  position: absolute;
-  top: 55%;
-  left:10%;
+  margin-top: 200px;
+  margin-left: 90px;
   color: #fff;
-  font-style: 42px;
+  font-size: 36px;
+  line-height: 36px;
   font-weight: 600;
   text-shadow: 3px 3px 2px rgba(1, 1, 1, 1);
-  width: 60%;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
+  width: 70%;
+  float: left;
+  margin-bottom: 0;
 }
 .infos-slider h3{
-  position: absolute;
-  top: 69%;
-  left:10%;
+  margin-top: 16px;
+  margin-left: 90px;
   color: #fff;
-  font-style: 20px;
+  font-size: 24px;
   font-weight: 600;
   text-shadow: 3px 3px 2px rgba(1, 1, 1, 1);
-  width: 60%;
+  width: 70%;
+  float: left;
 }
 .infos-slider a{
   position: absolute;
-  top: 73%;
-  right:10%;
+  top: 280px;
+  right: 90px;
   color: #fff;
   background-color: #e20613;
-  font-style: 14px;
+  font-size: 14px;
   font-weight: 600;
   padding: 2px 25px;
   border: 4px solid #fff;
@@ -1335,6 +1336,14 @@ style a page via class
   height: 250px;
   overflow: hidden;
   position: relative;
+  margin-left: 0;
+  margin-right: 30px;
+}
+.a-la-une article{
+  margin-left: 10px;
+}
+.info-blocks article:nth-child(3n + 3), .a-la-une article{
+  margin-right: 0;
 }
 .info-blocks header, .a-la-une header{
   height: 60px;
@@ -1405,10 +1414,14 @@ style a page via class
   color: #fff;
 }
 .a-la-une{
-  margin: 40px 0 140px 0;
+  margin: 30px 0 430px 0;
+  padding-bottom: 50px;
 }
 .a-la-une article{
-  margin-top: 20px
+  margin-top: 30px
+}
+.a-la-une article:first-of-type{
+  margin-top: 10px;
 }
 .a-la-une h2{
   color: #009fe3;
@@ -1417,10 +1430,15 @@ style a page via class
   font-weight: 600;
 }
 .partenaires{
+  position: absolute;
+  bottom: -20px;
   display: table;
   border-collapse: separate;
   border-spacing: 30px;
-  margin-bottom: -20px;
+  left: 50%;
+  -ms-transform: translate(-50%,0); /* IE 9 */
+  -webkit-transform: translate(-50%,0); /* Chrome, Safari, Opera */
+  transform: translate(-50%,0);
 }
 .partenaires h2{
   font-size: 21px;
@@ -1452,9 +1470,354 @@ style a page via class
     position: relative;
 }
 .montagneBackground{
-  background:url('../images/montagneBackground.png') #fff no-repeat !important;
+  background:url('../images/montagneBackground.jpg') #fff no-repeat !important;
   background-position: center bottom !important;
 }
+/* page nos fromages, nos recettes */
+.categories-f-r{
+  position: relative;
+}
+.categories-f-r div.text-wrapper{
+  position: absolute;
+  top: 105px;
+  left: 23%;
+  width: 54%;
+  background: rgba(255, 255, 255, 0.8);
+}
+.categories-f-r div.text-wrapper h1{
+  font-size: 36px;
+  color: #009fe3;
+  text-align: center;
+  text-shadow: 3px 3px 2px rgba(255, 2555, 255, 1);
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.categories-f-r div.text-wrapper h2{
+  font-size: 20px;
+  color: #1d1d1b;
+  text-align: center;
+  text-shadow: 3px 3px 2px rgba(255, 2555, 255, 1);
+  margin-top: 0px;
+  line-height: 1.2em;
+}
+
+.categorie-bloc{
+  width: 33.33333%;
+  height: 445px;
+  float:left;
+  position: relative;
+  overflow: hidden;
+}
+.categorie-bloc img{
+  position: absolute;
+  z-index: 0;
+}
+.categorie-bloc a{
+  position: absolute;
+  z-index: 1;
+  width: 205px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #fff;
+  background: #e30613;
+  bottom: 75px;
+  left: 50%;
+  margin-left: -102.5px;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.categorie-bloc a:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #fff;
+}
+.categorie-bloc a h3{
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 55px;
+  height: 55px;
+}
+
+.the_categorie{
+  position: relative;
+}
+.the_categorie .categorie-bloc{
+  height: 180px;
+}
+
+.the_categorie .categorie-bloc a{
+  bottom: 20px;
+}
+.collection{
+  font-size: 36px;
+  color: #009fe3;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+.post_categorie{
+  padding-bottom: 800px;
+}
+.post_categorie.outer-center {
+    float: right;
+    right: 50%;
+    position: relative;
+}
+.post_categorie div.inner-center {
+    float: right;
+    right: -50%;
+    position: relative;
+}
+.post_categorie article{
+  width: 148px;
+  height: 225px;
+  margin: 40px 40px;
+  float: left;
+}
+.post_categorie article .image-wrapper{
+  width: 100%;
+  height: 180px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.post_categorie article a.item-link:hover .image-wrapper{
+  border: 3px solid #009fe3;
+  position: relative;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.post_categorie article a.item-link:hover .image-wrapper span{
+  right: 3px;
+}
+.post_categorie article .image-wrapper img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.post_categorie article .image-wrapper  span{
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -10px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 8px;
+  font-size: 10px;
+  background-color: #e30613;
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: 600;
+
+}
+.post_categorie article h2, .post_categorie article h3, .post_categorie article p{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  color: #1b1b1B;
+}
+.post_categorie article h3{
+  color: #19893b;
+  margin-top: 0;
+}
+.post_categorie article p{
+  font-weight: 300;
+  margin-top: 0;
+}
+.other_same_post{
+  margin-top: 30px;
+  position: relative;
+  width: calc( 100% - 40px);
+  padding-bottom: 0;
+  margin-bottom: 30px;
+}
+.other_same_post_wrapper{
+  height: 100%;
+  position: relative;
+}
+.next-products{
+  width: 28px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: url('../images/arrow-next-item.png');
+  cursor: pointer;
+}
+.other_same_post article{
+  width: 115px;
+  height: 150px;
+  margin: 15px;
+}
+.other_same_post article .image-wrapper{
+  height: 115px;
+    border: 1px solid #009fe3;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.other_same_post_hidder{
+  overflow: hidden;
+  width: 1030px;
+  height: 240px;
+}
+.the_post_detail{
+  border-top: 1px solid #9d9d9c;
+  border-bottom: 1px solid #9d9d9c;
+  margin-bottom: 900px;
+  min-height: 530px;
+}
+.the_post_detail .image-wrapper, .the_post_detail .description{
+  width: 50%;
+  float: left;
+  height: 100%;
+  min-height: 530px;
+}
+.the_post_detail .description{
+ background: #ededed;
+ padding: 20px;
+  font-size: 14px;
+  color: #575756;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.the_post_detail .description h1{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 26px;
+  color: #000;
+}
+.the_post_detail .description h2{
+  margin-top: 0;
+  font-size: 22px;
+  color: #000;
+  margin-top: 5px;
+}
+.the_post_detail .description h3{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
+.the_post_detail .description h4{
+  width: 100%;
+  padding-top: 5px;
+  border-top: 1px solid #000;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
+.the_post_detail .description li:before{
+  content:'> ';
+}
+.the_post_detail .description h2 .accroche{
+  font-weight: bold;
+  color: #19893b;
+}
+.the_post_detail .description .content{
+
+}
+.the_post_detail .description .astuce:before{
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: url('../images/light-bulb.png') no-repeat;
+  display: block;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.the_post_detail .other-products{
+  border-top: 1px solid #9d9d9c;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.the_post_detail .other-products h4{
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+  color: #000;
+}
+.the_post_detail .image-wrapper{
+  position: relative;
+}
+.the_post_detail .image-wrapper img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.other-format-image-wrapper{
+  width: 75px;
+  height: 75px;
+  position: relative;
+  border: 1px solid #009fe3;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  float: left;
+  margin-right: 30px;
+
+}
+.the_post_detail .other-products a:hover .other-format-image-wrapper{
+  border: 3px solid #009fe3;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.other-format-image-wrapper img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.no-result{
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+/* page catégorie fromages, recettes */
+
 /* blog template page */
 /* archive page */
 /* date archive page */
@@ -1488,6 +1851,8 @@ style a page via class
 /* if user is logged in */
 /* paged items like search results or archives */
 /* individual paged (i.e. body.paged-3) */
+/* admin page */
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1499,12 +1864,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #fff;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #fff; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1589,6 +1954,12 @@ and more scalable.
   float: left;
   width: 420px;
 }
+.responsive-nav{
+  display: none;
+}
+.toggle-menu-responsive{
+  display: none;
+}
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1651,13 +2022,41 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.admin-bar #content{
-  padding-top: 98px;
-}
 #content {
   background-color: #fff;
   padding-top: 130px;
+  min-height: 1090px;
+  position: relative;
 }
+.content-page{
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  margin-bottom: 500px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.content-page h2{
+  font-size: 17px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 20px;
+}
+.content-page p{
+  font-size: 12px;
+  color: #575756;
+  line-height: 1.25em;
+}
+.content-page a{
+  color: #009fe3;
+}
+.right-panel article{
+  margin-top: 30px;
+}
+.right-panel article:first-child{
+  margin-top: 40px;
+}
+
 
 .hentry {
   background-color: white;
@@ -2006,6 +2405,9 @@ FOOTER STYLES
   display: inline;
   font-size: 15px;
 }
+.footer-separate{
+  display: none;
+}
 
 .footer-nav{
   margin-top: 30px;
@@ -2034,6 +2436,9 @@ FOOTER STYLES
     }
     .social{
       margin-top: 30px;
+      display: inline;
+    }
+    .social > div{
       display: inline;
     }
     .social a{
@@ -2104,243 +2509,29 @@ FOOTER STYLES
 .search-box p{
   margin-top: 11px;
 }
+.nav {
+  border: 0;
+}
+.nav ul {
+  background: #323944;
+  margin-top: 0; }
+.nav li {
+  float: left;
+  position: relative;
+}
 
-/*
-if you checked out the link above:
-http://www.alistapart.com/articles/organizing-mobile/
-you'll want to style the footer nav
-a bit more in-depth. Remember to keep
-it simple because you'll have to
-override these styles for the desktop
-view.
-*/
-/* end .footer-links */
-/*********************
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
-*********************/
-@media only screen and (min-width: 481px) {
-  /******************************************************************
-  Site Name:
-  Author:
 
-  Stylesheet: 481px and Up Stylesheet
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
 
-  This stylesheet is loaded for larger devices. It's set to
-  481px because at 480px it would load on a landscaped iPhone.
-  This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection.
+}
 
-  A word of warning. This size COULD be a larger mobile device,
-  so you still want to keep it pretty light and simply expand
-  upon your base.scss styles.
-
-  ******************************************************************/
-  /*
-  IMPORTANT NOTE ABOUT SASS 3.3 & UP
-  You can't use @extend within media queries
-  anymore, so just be aware that if you drop
-  them in here, they won't work.
-  */
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
-
-  /* end .menu */
-  /*********************
-  POSTS & CONTENT STYLES
-  *********************/
-  /* entry content */
-  .entry-content {
-    /* at this larger size, we can start to align images */ }
-    .entry-content .alignleft, .entry-content img.alignleft {
-      margin-right: 1.5em;
-      display: inline;
-      float: left; }
-    .entry-content .alignright, .entry-content img.alignright {
-      margin-left: 1.5em;
-      display: inline;
-      float: right; }
-    .entry-content .aligncenter, .entry-content img.aligncenter {
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      clear: both; }
-
-  /* end .entry-content */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */ }
-/*********************
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 768px) {
-  /******************************************************************
-  Site Name:
-  Author:
-
-  Stylesheet: Tablet & Small Desktop Stylesheet
-
-  Here's where you can start getting into the good stuff.
-  This size will work on iPads, other tablets, and desktops.
-  So you can start working with more styles, background images,
-  and other resources. You'll also notice the grid starts to
-  come into play. Have fun!
-
-  ******************************************************************/
-  /*********************
-  GENERAL STYLES
-  *********************/
-  /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  .wrap {
-    width: 760px; }
-
-  /*********************
-  HEADER STYLES
-  *********************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  .nav {
-    border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav ul {
-      background: #323944;
-      margin-top: 0; }
-    .nav li {
-      float: left;
-      position: relative;
-      /*
-      plan your menus and drop-downs wisely.
-      */
-      /* showing sub-menus */ }
-      .nav li a {
-        border-bottom: 0;
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover, .nav li a:focus {
-        }
-      .nav li ul.sub-menu,
-      .nav li ul.children {
-        margin-top: 0;
-        border: 1px solid #ccc;
-        border-top: 0;
-        position: absolute;
-        visibility: hidden;
-        z-index: 8999;
-        /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
-          /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
-          */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
-            padding-left: 10px;
-            border-right: 0;
-            display: block;
-            width: 180px;
-            border-bottom: 1px solid #ccc; }
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
-            border-bottom: 0; }
-          .nav li ul.sub-menu li ul,
-          .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
-      .nav li:hover > ul {
-        top: auto;
-        visibility: visible; }
-
-  /* end .nav */
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
-  .sidebar {
-    margin-top: 2.2em; }
-
-  .widgettitle {
-    border-bottom: 2px solid #444;
-    margin-bottom: 0.75em; }
-
-  .widget {
-    padding: 0 10px;
-    margin: 2.2em 0; }
-    .widget ul li {
-      margin-bottom: 0.75em;
-      /* deep nesting */ }
-      .widget ul li ul {
-        margin-top: 0.75em;
-        padding-left: 1em; }
-
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */ }
-
-  /* end .footer-links */ }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
-@media only screen and (min-width: 960px) and (max-width: 1140px){
+@media only screen and (max-width: 1140px){
   /******************************************************************
 
   Stylesheet: Desktop Stylsheet
@@ -2359,21 +2550,21 @@ you can add resource intensive styles.
   .wrap {
       width: 1040px;
   }
-      .menu_right li:last-child a{
-          background: url('../images/social-header-960.png') no-repeat;
-          width: 17px;
-          height: 18px;
+  .menu_right li:last-child a{
+      background: url('../images/social-header-960.png') no-repeat;
+      width: 17px;
+      height: 18px;
 
-      }
-      .menu_right li:last-child a:nth-child(2){
-        background-position: -17px 0;
-      }
-      .menu_right li:last-child a:nth-child(3){
-        background-position: -34px 0;
-      }
-      .menu_right li:last-child a:nth-child(4){
-        background-position: -51px 0;
-      }
+  }
+  .menu_right li:last-child a:nth-child(2){
+    background-position: -17px 0;
+  }
+  .menu_right li:last-child a:nth-child(3){
+    background-position: -34px 0;
+  }
+  .menu_right li:last-child a:nth-child(4){
+    background-position: -51px 0;
+  }
 
   .quiveuxdufromage{
     clear: both;
@@ -2386,70 +2577,373 @@ you can add resource intensive styles.
   #main-slider-wrapper{
     height: 320px;
   }
+  .infos-slider h2{
+    margin-top: 160px;
+    margin-left: 90px;
+  }
+  .infos-slider h3{
+    margin-top: 16px;
+    margin-left: 90px;
+  }
+  .infos-slider a{
+    top: 230px;
+    right: 90px;
+  }
+  .info-blocks article, .a-la-une article{
+    height: 207px;
+  }
+  .info-blocks article h3, .a-la-une article h3{
+    font-size: 18px;
+  }
+  .articles_container{
+    width: 912px;
+    margin: 0 auto;
+  }
+  .other_same_post_hidder{
+    width: 860px;
+  }
 
 }
-/*********************
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*********************/
-@media only screen and (min-width: 1140px) {
-  /******************************************************************
-  Site Name:
-  Author:
 
-  Stylesheet: Super Large Monitor Stylesheet
 
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens.
+@media only screen and (max-width: 959px){
 
-  ******************************************************************/ }
-/*********************
-RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
-*********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /******************************************************************
-  Site Name:
-  Author:
+  .menu_left, .menu_right{
+      display: none;
+  }
+  .header{
+    height: 55px;
+    position: relative;
+    z-index: 10;
+  }
+  .header h1{
+    float: none;
+    text-align: center;
+    margin-top: 0;
+  }
+  .logo{
+    width: 175px;
+  }
+  .toggle-menu-responsive{
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 100%;
+    border-left: 2px solid #fff;
+    background: url('../images/toggle-responsive-menu.png') no-repeat center center;
+    top:0;
+    right: 0;
+  }
+  .toggle-menu-responsive.active{
+    background: url('../images/toggle-responsive-menu.png') #26609d no-repeat center center;
+  }
+  .responsive-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -ms-transform: translate(0,-350px); /* IE 9 */
+    -webkit-transform: translate(0,-350px); /* Chrome, Safari, Opera */
+    transform: translate(0,-350px);
+    -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here */
+    -moz-transition: -moz-transform 0.3s ease-in;
+    -o-transition: -o-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
 
-  Stylesheet: Retina Screens & Devices Stylesheet
-
-  When handling retina screens you need to make adjustments, especially
-  if you're not using font icons. Here you can add them in one neat
-  place.
-
-  ******************************************************************/
-  /*
-
-  EXAMPLE
-  Let's say you have an image and you need to make sure it looks ok
-  on retina screens. Let's say we have an icon which dimension are
-  24px x 24px. In your regular stylesheets, it would look something
-  like this:
-
-  .icon {
-  	width: 24px;
-  	height: 24px;
-  	background: url(img/test.png) no-repeat;
+    background: #ededed;
+    height: 350px;
+    width: 100%;
+    z-index: 2;
+    display: block;
+  }
+  .responsive-nav.active{
+    -ms-transform: translate(0,55px); /* IE 9 */
+    -webkit-transform: translate(0,55px); /* Chrome, Safari, Opera */
+    transform: translate(0,55px);
+  }
+  .responsive-nav .responsive-menu li{
+    float: none;
+    display: inline-block;
+    width: 100%;
+    padding: 4px;
+    border-bottom: 1px solid #1caad9;
+    text-align: center;
+    font-weight: 600;
+  }
+  .responsive-nav .responsive-menu li:first-of-type{
+    padding-top: 40px;
+  }
+  .responsive-nav .responsive-menu li:last-of-type, .responsive-nav .responsive-menu li:nth-last-of-type(2), .responsive-nav .responsive-menu li:nth-last-of-type(3){
+    border-bottom: none;
+  }
+  .responsive-nav .responsive-menu li:nth-last-of-type(2){
+    padding: 0;
+    margin-top: -5px;
+  }
+  .responsive-nav .responsive-menu li:nth-last-of-type(2) .search-box{
+    margin-left: 0px;
+  }
+  .responsive-nav .responsive-menu li a{
+    float: none;
+    color: #009fe3;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .responsive-nav .responsive-menu li:last-of-type .social-wrapper{
+    width: 124px;
+    margin: 10px auto 10px auto;
+  }
+  .responsive-nav .responsive-menu li:last-of-type a{
+      width: 24px;
+      height: 28px;
+      display: block;
+      float: left;
+      margin-left: 7px;
+      text-indent: -9000px;
+      background: url('../images/social-mobile.svg') no-repeat;
+      background-size: 116px 28px;
+  }
+  .responsive-nav .responsive-menu li:last-of-type a:nth-child(2){
+    background-position: -23px 0;
+  }
+  .responsive-nav .responsive-menu li:last-of-type a:nth-child(3){
+    background-position: -47px 0;
+  }
+  .responsive-nav .responsive-menu li:last-of-type a:nth-child(4){
+    background-position: -70px 0;
+  }
+  .responsive-nav .responsive-menu li a:hover, .responsive-nav .responsive-menu li.current-menu-item a{
+    color: #26609d;
+  }
+  #content{
+    padding-top: 0 !important;
+  }
+  .ls-wrapper{
+    height: 340px;
+    margin-bottom: 0;
+  }
+  .liquid-slider .ls-panel{
+    height: 320px;
+  }
+  .main-slider{
+    height: 320px;
+  }
+  .panel-wrapper img{
+    width: auto;
+  }
+  .ls-nav-left-arrow, .ls-nav-right-arrow{
+    display: none !important;
+  }
+  .infos-slider{
+    padding: 0 40px;
+  }
+  .infos-slider h2{
+    margin-top: 140px;
+    margin-left: 0;
+    font-size: 24px;
+    line-height: 24px;
+    width: 100%;
+  }
+  .infos-slider h3{
+    margin-top: 16px;
+    margin-left: 0;
+    font-size: 18px;
+    width: 100%;
+  }
+  .infos-slider a{
+    top: 250px;
+    right: 20px;
+  }
+  .info-blocks article, .a-la-une article{
+    width: 400px;
+    margin: 30px auto 0 auto;
+  }
+  .info-blocks article:nth-child(3n + 3), .a-la-une article {
+    margin-right: auto;
+  }
+  .info-blocks article > div img, .a-la-une article > div img{
+    width: 100%;
+    height: auto;
+  }
+  .articles_container{
+    width: 684px;
+  }
+  .categorie-bloc a{
+    width: 140px;
+    margin-left: -70px;
+  }
+  .categorie-bloc a h3 {
+    font-size: 16px;
+    line-height: 50px;
+    height: 50px;
+  }
+  .other_same_post_hidder{
+    width: 580px;
+  }
+  .content-page{
+    margin-bottom: 50px;
+  }
+  .right-panel{
+    margin-bottom: 400px;
+  }
+  .partenaires{
+    border-spacing: 15px;
+    bottom: 0;
+  }
+  .partenaires h2{
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .partenaires a img {
+    max-height: 40px;
+  }
+  .footer{
+    height: auto;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .footer .footer-nav li{
+    float: none;
+    display: inline;
+    text-align: center;
+  }
+  .footer .social{
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .footer .social.outer-center{
+    float: right;
+    right: 50%;
+    position: relative;
+    display: block;
+  }
+  .footer .centering-wrapper{
+    padding: 0 0 0 20px;
+  }
+  .footer .footer-wrapper{
+       padding: 0 20px;
+  }
+  .footer .social > div.inner-center {
+    float: right;
+    right: -50%;
+    position: relative;
+    display: block;
+  }
+  .footer-separate{
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .footer .search-box{
+    display: none;
+  }
+  .wrap {
+    width: 760px;
   }
 
-  For retina screens, we have to make some adjustments, so that image
-  doesn't look blurry. So, taking into account the image above and the
-  dimensions, this is what we would put in our retina stylesheet:
+}
 
-  .icon {
-  	background: url(img/test@2x.png) no-repeat;
-  	background-size: 24px 24px;
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (max-width: 767px) {
+
+  .infos-slider h2{
+    font-size: 20px;
+  }
+  .infos-slider h3{
+    font-size: 16px;
+  }
+  .categories-f-r{
+    padding-bottom: 300px;
+  }
+  .categories-f-r div.text-wrapper{
+    position: initial;
+    width: 100%;
+    padding: 60px 30px 30px 30px;
+  }
+  .categories-f-r div.text-wrapper h2{
+    margin-top: 20px;
+  }
+  .categories-f-r .categorie-bloc {
+    width: 100%;
+    height: 350px;
+    position: inherit;
+    overflow: hidden;
+    margin-top: 30px;
+    float: none;
+  }
+  .categories-f-r .categorie-bloc a{
+    bottom: 30px;
+  }
+  .categories-f-r .categorie-bloc img{
+    width: 100%;
+    height: auto;
+  }
+  .the_categorie{
+    padding-bottom: 0;
+  }
+  .the_categorie .categorie-bloc{
+    height: 150px;
+    margin-top: 20px;
+  }
+  .the_categorie .categorie-bloc:first-child{
+    margin-top: 0;
+  }
+  .post_categorie {
+    padding-bottom: 200px;
+  }
+  .articles_container{
+    width: 456px;
+  }
+  .collection{
+    font-size: 20px;
+  }
+  .other_same_post_hidder{
+    width: 290px;
+  }
+  .the_post_detail .image-wrapper, .the_post_detail .description{
+    width: 100%;
+    float: none;
+    height: 100%;
+    min-height: 250px;
+  }
+  .the_post_detail .description{
+    margin-top: 30px;
+  }
+  .the_post_detail{
+    margin-bottom: 250px;
   }
 
-  So, you would create the same icon, but at double the resolution, meaning
-  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
-  (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go.
 
-  */ }
+}
+
+@media only screen and (max-width: 479px) {
+
+
+  .infos-slider h2{
+    margin-top: 100px;
+  }
+
+  .info-blocks article, .a-la-une article{
+    width: 320px;
+    margin: 30px auto 0 auto;
+  }
+  .articles_container{
+    width: 228px;
+  }
+   .other_same_post_hidder{
+    width: 150px;
+  }
+
+}
+
+
 /*********************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
@@ -2833,255 +3327,213 @@ Note: IE6 works fine without this fix.
 
 @media (min-width: 768px) and (max-width: 959px) {
 
-  body {
-          min-width: 768px;
-  }
+body {
+        min-width: 768px;
+}
 
-  /* =Containers
-  --------------------------------------------------------------------------------*/
-  .container_12
-  {
-          margin-left: auto;
-          margin-right: auto;
-          width: 768px;
-  }
+/* =Containers
+--------------------------------------------------------------------------------*/
+.m-container_4
+{
+        margin-left: auto;
+        margin-right: auto;
+        width: 768px;
+}
 
-  /* =Grid >> Global
-  --------------------------------------------------------------------------------*/
-  .grid_1,
-  .grid_2,
-  .grid_3,
-  .grid_4,
-  .grid_5,
-  .grid_6,
-  .grid_7,
-  .grid_8,
-  .grid_9,
-  .grid_10,
-  .grid_11,
-  .grid_12 {
-          display: inline;
-          float: left;
-          margin-left: 10px;
-          margin-right: 10px;
-  }
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.m-grid_1,
+.m-grid_2,
+.m-grid_3,
+.m-grid_4 {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+}
 
-  .push_1, .pull_1,
-  .push_2, .pull_2,
-  .push_3, .pull_3,
-  .push_4, .pull_4,
-  .push_5, .pull_5,
-  .push_6, .pull_6,
-  .push_7, .pull_7,
-  .push_8, .pull_8,
-  .push_9, .pull_9,
-  .push_10, .pull_10,
-  .push_11, .pull_11 {
-          position: relative;
-  }
+.m-push_1, .m-pull_1,
+.m-push_2, .m-pull_2,
+.m-push_3, .m-pull_3 {
+        position: relative;
+}
 
-  /* =Grid >> Children (Alpha ~ First, Omega ~ Last)
-  --------------------------------------------------------------------------------*/
-  .alpha {margin-left: 0;}
-  .omega {margin-right: 0;}
+/* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+--------------------------------------------------------------------------------*/
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
 
-  /* =Grid >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .grid_1 {width: 44px;}
-  .container_12 .grid_2 {width: 108px;}
-  .container_12 .grid_3 {width: 172px;}
-  .container_12 .grid_4 {width: 236px;}
-  .container_12 .grid_5 {width: 300px;}
-  .container_12 .grid_6 {width: 364px;}
-  .container_12 .grid_7 {width: 428px;}
-  .container_12 .grid_8 {width: 492px;}
-  .container_12 .grid_9 {width: 556px;}
-  .container_12 .grid_10 {width: 620px;}
-  .container_12 .grid_11 {width: 684px;}
-  .container_12 .grid_12 {width: 748px;}
+/* =Grid >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-grid_1 {width: 172px;}
+.m-container_4 .m-grid_2 {width: 364px;}
+.m-container_4 .m-grid_3 {width: 556px;}
+.m-container_4 .m-grid_4 {width: 748px;}
 
-  /* =Prefix Extra Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .prefix_1 {padding-left: 64px;}
-  .container_12 .prefix_2 {padding-left: 128px;}
-  .container_12 .prefix_3 {padding-left: 192px;}
-  .container_12 .prefix_4 {padding-left: 256px;}
-  .container_12 .prefix_5 {padding-left: 320px;}
-  .container_12 .prefix_6 {padding-left: 384px;}
-  .container_12 .prefix_7 {padding-left: 448px;}
-  .container_12 .prefix_8 {padding-left: 512px;}
-  .container_12 .prefix_9 {padding-left: 576px;}
-  .container_12 .prefix_10 {padding-left: 640px;}
-  .container_12 .prefix_11 {padding-left: 704px;}
+/* =Prefix Extra Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-prefix_1 {padding-left: 192px;}
+.m-container_4 .m-prefix_2 {padding-left: 384px;}
+.m-container_4 .m-prefix_3 {padding-left: 576px;}
 
-  /* =Suffix Extra Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .suffix_1 {padding-right: 64px;}
-  .container_12 .suffix_2 {padding-right: 128px;}
-  .container_12 .suffix_3 {padding-right: 192px;}
-  .container_12 .suffix_4 {padding-right: 256px;}
-  .container_12 .suffix_5 {padding-right: 320px;}
-  .container_12 .suffix_6 {padding-right: 384px;}
-  .container_12 .suffix_7 {padding-right: 448px;}
-  .container_12 .suffix_8 {padding-right: 512px;}
-  .container_12 .suffix_9 {padding-right: 576px;}
-  .container_12 .suffix_10 {padding-right: 640px;}
-  .container_12 .suffix_11 {padding-right: 704px;}
+/* =Suffix Extra Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-suffix_1 {padding-right: 192px;}
+.m-container_4 .m-suffix_2 {padding-right: 384px;}
+.m-container_4 .m-suffix_3 {padding-right: 576px;}
 
-  /* `Push Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .push_1 {left: 64px;}
-  .container_12 .push_2 {left: 128px;}
-  .container_12 .push_3 {left: 192px;}
-  .container_12 .push_4 {left: 256px;}
-  .container_12 .push_5 {left: 320px;}
-  .container_12 .push_6 {left: 384px;}
-  .container_12 .push_7 {left: 448px;}
-  .container_12 .push_8 {left: 512px;}
-  .container_12 .push_9 {left: 576px;}
-  .container_12 .push_10 {left: 640px;}
-  .container_12 .push_11 {left: 704px;}
+/* `Push Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-push_1 {left: 192px;}
+.m-container_4 .m-push_2 {left: 384px;}
+.m-container_4 .m-push_3 {left: 576px;}
 
-  /* `Pull Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .pull_1 {left: -64px;}
-  .container_12 .pull_2 {left: -128px;}
-  .container_12 .pull_3 {left: -192px;}
-  .container_12 .pull_4 {left: -256px;}
-  .container_12 .pull_5 {left: -320px;}
-  .container_12 .pull_6 {left: -384px;}
-  .container_12 .pull_7 {left: -448px;}
-  .container_12 .pull_8 {left: -512px;}
-  .container_12 .pull_9 {left: -576px;}
-  .container_12 .pull_10 {left: -640px;}
-  .container_12 .pull_11 {left: -704px;}
+/* `Pull Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-pull_1 {left: -192px;}
+.m-container_4 .m-pull_2 {left: -384px;}
+.m-container_4 .m-pull_3 {left: -576px;}
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 
   body {
-          min-width: 480px;
+        min-width: 480px;
   }
 
-  /* =Containers
-  --------------------------------------------------------------------------------*/
-  .container_12
-  {
-          margin-left: auto;
-          margin-right: auto;
-          width: 480px;
-  }
+/* =Containers
+--------------------------------------------------------------------------------*/
+.m-container_4
+{
+        margin-left: auto;
+        margin-right: auto;
+        width: 480px;
+}
 
-  /* =Grid >> Global
-  --------------------------------------------------------------------------------*/
-  .grid_1,
-  .grid_2,
-  .grid_3,
-  .grid_4,
-  .grid_5,
-  .grid_6,
-  .grid_7,
-  .grid_8,
-  .grid_9,
-  .grid_10,
-  .grid_11,
-  .grid_12 {
-          display: inline;
-          float: left;
-          margin-left: 10px;
-          margin-right: 10px;
-  }
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.m-grid_1,
+.m-grid_2,
+.m-grid_3,
+.m-grid_4 {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+}
 
-  .push_1, .pull_1,
-  .push_2, .pull_2,
-  .push_3, .pull_3,
-  .push_4, .pull_4,
-  .push_5, .pull_5,
-  .push_6, .pull_6,
-  .push_7, .pull_7,
-  .push_8, .pull_8,
-  .push_9, .pull_9,
-  .push_10, .pull_10,
-  .push_11, .pull_11 {
-          position: relative;
-  }
+.m-push_1, .m-pull_1,
+.m-push_2, .m-pull_2,
+.m-push_3, .m-pull_3 {
+        position: relative;
+}
 
-  /* =Grid >> Children (Alpha ~ First, Omega ~ Last)
-  --------------------------------------------------------------------------------*/
-  .alpha {margin-left: 0;}
-  .omega {margin-right: 0;}
+/* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+--------------------------------------------------------------------------------*/
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
 
-  /* =Grid >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .grid_1 {width: 20px;}
-  .container_12 .grid_2 {width: 60px;}
-  .container_12 .grid_3 {width: 100px;}
-  .container_12 .grid_4 {width: 140px;}
-  .container_12 .grid_5 {width: 180px;}
-  .container_12 .grid_6 {width: 220px;}
-  .container_12 .grid_7 {width: 260px;}
-  .container_12 .grid_8 {width: 300px;}
-  .container_12 .grid_9 {width: 340px;}
-  .container_12 .grid_10 {width: 380px;}
-  .container_12 .grid_11 {width: 420px;}
-  .container_12 .grid_12 {width: 460px;}
+/* =Grid >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-grid_1 {width: 100px;}
+.m-container_4 .m-grid_2 {width: 220px;}
+.m-container_4 .m-grid_3 {width: 340px;}
+.m-container_4 .m-grid_4 {width: 460px;}
 
-  /* =Prefix Extra Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .prefix_1 {padding-left: 40px;}
-  .container_12 .prefix_2 {padding-left: 80px;}
-  .container_12 .prefix_3 {padding-left: 120px;}
-  .container_12 .prefix_4 {padding-left: 160px;}
-  .container_12 .prefix_5 {padding-left: 200px;}
-  .container_12 .prefix_6 {padding-left: 240px;}
-  .container_12 .prefix_7 {padding-left: 280px;}
-  .container_12 .prefix_8 {padding-left: 320px;}
-  .container_12 .prefix_9 {padding-left: 360px;}
-  .container_12 .prefix_10 {padding-left: 400px;}
-  .container_12 .prefix_11 {padding-left: 440px;}
+/* =Prefix Extra Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-prefix_1 {padding-left: 120px;}
+.m-container_4 .m-prefix_2 {padding-left: 240px;}
+.m-container_4 .m-prefix_3 {padding-left: 360px;}
 
-  /* =Suffix Extra Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .suffix_1 {padding-right: 40px;}
-  .container_12 .suffix_2 {padding-right: 80px;}
-  .container_12 .suffix_3 {padding-right: 120px;}
-  .container_12 .suffix_4 {padding-right: 160px;}
-  .container_12 .suffix_5 {padding-right: 200px;}
-  .container_12 .suffix_6 {padding-right: 240px;}
-  .container_12 .suffix_7 {padding-right: 280px;}
-  .container_12 .suffix_8 {padding-right: 320px;}
-  .container_12 .suffix_9 {padding-right: 360px;}
-  .container_12 .suffix_10 {padding-right: 400px;}
-  .container_12 .suffix_11 {padding-right: 440px;}
+/* =Suffix Extra Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-suffix_1 {padding-right: 120px;}
+.m-container_4 .m-suffix_2 {padding-right: 240px;}
+.m-container_4 .m-suffix_3 {padding-right: 360px;}
 
-  /* `Push Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .push_1 {left: 40px;}
-  .container_12 .push_2 {left: 80px;}
-  .container_12 .push_3 {left: 120px;}
-  .container_12 .push_4 {left: 160px;}
-  .container_12 .push_5 {left: 200px;}
-  .container_12 .push_6 {left: 240px;}
-  .container_12 .push_7 {left: 280px;}
-  .container_12 .push_8 {left: 320px;}
-  .container_12 .push_9 {left: 360px;}
-  .container_12 .push_10 {left: 400px;}
-  .container_12 .push_11 {left: 440px;}
+/* `Push Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-push_1 {left: 120px;}
+.m-container_4 .m-push_2 {left: 240px;}
+.m-container_4 .m-push_3 {left: 360px;}
 
-  /* `Pull Space >> 12 Columns
-  --------------------------------------------------------------------------------*/
-  .container_12 .pull_1 {left: -40px;}
-  .container_12 .pull_2 {left: -80px;}
-  .container_12 .pull_3 {left: -120px;}
-  .container_12 .pull_4 {left: -160px;}
-  .container_12 .pull_5 {left: -200px;}
-  .container_12 .pull_6 {left: -240px;}
-  .container_12 .pull_7 {left: -280px;}
-  .container_12 .pull_8 {left: -320px;}
-  .container_12 .pull_9 {left: -360px;}
-  .container_12 .pull_10 {left: -400px;}
-  .container_12 .pull_11 {left: -440px;}
+/* `Pull Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-pull_1 {left: -120px;}
+.m-container_4 .m-pull_2 {left: -240px;}
+.m-container_4 .m-pull_3 {left: -360px;}
 
 }
 
+@media (max-width: 479px) {
+
+body {
+        min-width: 320px;
+}
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.m-container_4
+{
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.m-grid_1,
+.m-grid_2,
+.m-grid_3,
+.m-grid_4 {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+}
+
+.m-push_1, .m-pull_1,
+.m-push_2, .m-pull_2,
+.m-push_3, .m-pull_3 {
+        position: relative;
+}
+
+/* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+--------------------------------------------------------------------------------*/
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+/* =Grid >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-grid_1 {width: 60px;}
+.m-container_4 .m-grid_2 {width: 140px;}
+.m-container_4 .m-grid_3 {width: 220px;}
+.m-container_4 .m-grid_4 {width: 300px;}
+
+/* =Prefix Extra Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-prefix_1 {padding-left: 80px;}
+.m-container_4 .m-prefix_2 {padding-left: 160px;}
+.m-container_4 .m-prefix_3 {padding-left: 240px;}
+
+/* =Suffix Extra Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-suffix_1 {padding-right: 80px;}
+.m-container_4 .m-suffix_2 {padding-right: 160px;}
+.m-container_4 .m-suffix_3 {padding-right: 240px;}
+
+/* `Push Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-push_1 {left: 80px;}
+.m-container_4 .m-push_2 {left: 160px;}
+.m-container_4 .m-push_3 {left: 240px;}
+
+/* `Pull Space >> 4 Columns
+--------------------------------------------------------------------------------*/
+.m-container_4 .m-pull_1 {left: -80px;}
+.m-container_4 .m-pull_2 {left: -160px;}
+.m-container_4 .m-pull_3 {left: -240px;}
+
+}

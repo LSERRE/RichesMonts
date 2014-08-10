@@ -19,27 +19,33 @@
 								)); ?>
 							</nav>
 
-							<div class="social">
-								<img class="quiveuxdufromage" src="<?php bloginfo('template_url'); ?>/library/images/quiveuxdufromage.png" alt="Qui veux du fromage">
-								<a class="facebook" href="http://www.facebook.com">Facebook</a>
-								<a class="twitter" href="http://www.twitter.com">Twitter</a>
-								<a class="youtube" href="http://www.youtube.com">Youtube</a>
-								<a class="pinterest" href="http://www.pinterest.com">Pinterest</a>
+							<div class="outer-center social">
+								<div class="inner-center">
+									<img class="quiveuxdufromage" src="<?php bloginfo('template_url'); ?>/library/images/quiveuxdufromage.png" alt="Qui veux du fromage">
+									<a class="facebook" href="http://www.facebook.com">Facebook</a>
+									<a class="twitter" href="http://www.twitter.com">Twitter</a>
+									<a class="youtube" href="http://www.youtube.com">Youtube</a>
+									<a class="pinterest" href="http://www.pinterest.com">Pinterest</a>
+								</div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
+						<div class="clearfix"></div>
 					</div>
+					<hr class="footer-separate" />
+					<div class="clearfix"></div>
 					<div class="footer-wrapper">
 						<div class="centering-wrapper">
 							<p class="mangerbouger">« Pour votre santé, mangez au moins cinq fruits et légumes par jour » – www.mangerbouger.fr</p>
-							<form action="" method="post" class="search-box">		
-								<p>			
+							<form action="" method="post" class="search-box">
+								<p>
 								<input type="search" placeholder="Recherche" name="footer_search">
 								<input type="submit" value="ok">
 								</p>
 							</form>
 						</div>
 					</div>
+					<div class="clearfix"></div>
 				</div>
 			</footer>
 
