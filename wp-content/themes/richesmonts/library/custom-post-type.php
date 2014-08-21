@@ -99,44 +99,7 @@ function custom_post_type_fromages() {
 	); /* end of register post type */
 
 }
-// let's create the function for the custom type fromage
-function custom_post_type_astuces() {
-	// creating (registering) the custom type
-	register_post_type( 'astuces', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-		// let's now add all the options for this post type
-		array( 'labels' => array(
-			'name' => __( 'Astuces', 'bonestheme' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Astuce', 'bonestheme' ), /* This is the individual type */
-			'all_items' => __( 'Toutes les astuces', 'bonestheme' ), /* the all items menu item */
-			'add_new' => __( 'Ajouter une astuce', 'bonestheme' ), /* The add new menu item */
-			'add_new_item' => __( 'Ajouter une nouvelle astuce', 'bonestheme' ), /* Add New Display Title */
-			'edit' => __( 'Modifier', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Modifier une astuce', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'Nouvelle astuce', 'bonestheme' ), /* New Display Title */
-			'view_item' => __( 'Voir astuce', 'bonestheme' ), /* View Display Title */
-			'search_items' => __( 'Chercher une astuce', 'bonestheme' ), /* Search Custom Type Title */
-			'not_found' =>  __( 'Rien a été trouvé en base de donnée.', 'bonestheme' ), /* This displays if there are no entries yet */
-			'not_found_in_trash' => __( 'Rien a été trouvé dans la corbeille', 'bonestheme' ), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
-			'description' => __( 'L\'ensemble des astuces', 'bonestheme' ), /* Custom Type Description */
-			'public' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 13, /* this is what order you want it to appear in on the left hand side menu */
-			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/post-type-astuce-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'custom_type', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'custom_type', /* you can rename the slug here */
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'revisions', 'sticky')
-		) /* end of options */
-	); /* end of register post type */
 
-}
 // let's create the function for the custom type slider
 function custom_post_type_slides() {
 	// creating (registering) the custom type
@@ -251,6 +214,122 @@ function custom_post_type_partenaires() {
 
 }
 
+// let's create the function for the custom type partenaire
+function custom_post_type_defis() {
+	// creating (registering) the custom type
+	register_post_type( 'defis', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'Defis', 'bonestheme' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Defis', 'bonestheme' ), /* This is the individual type */
+			'all_items' => __( 'Tout les defis', 'bonestheme' ), /* the all items menu item */
+			'add_new' => __( 'Ajouter un defis', 'bonestheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Ajouter un nouveau defis', 'bonestheme' ), /* Add New Display Title */
+			'edit' => __( 'Modifier', 'bonestheme' ), /* Edit Dialog */
+			'edit_item' => __( 'Modifier un defis', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'Nouveau defis', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'Voir defis', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Chercher un defis', 'bonestheme' ), /* Search Custom Type Title */
+			'not_found' =>  __( 'Rien a été trouvé en base de donnée.', 'bonestheme' ), /* This displays if there are no entries yet */
+			'not_found_in_trash' => __( 'Rien a été trouvé dans la corbeille', 'bonestheme' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'L\'ensemble des defis', 'bonestheme' ), /* Custom Type Description */
+			'public' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 17, /* this is what order you want it to appear in on the left hand side menu */
+			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/post-type-defis-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'defis', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'defis', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', 'revisions', 'sticky')
+		) /* end of options */
+	); /* end of register post type */
+
+}
+
+// let's create the function for the custom type partenaire
+function custom_post_type_quizz() {
+	// creating (registering) the custom type
+	register_post_type( 'quizz', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'Quizz', 'bonestheme' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Quizz', 'bonestheme' ), /* This is the individual type */
+			'all_items' => __( 'Tout les quizz', 'bonestheme' ), /* the all items menu item */
+			'add_new' => __( 'Ajouter un quizz', 'bonestheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Ajouter un nouveau quizz', 'bonestheme' ), /* Add New Display Title */
+			'edit' => __( 'Modifier', 'bonestheme' ), /* Edit Dialog */
+			'edit_item' => __( 'Modifier un quizz', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'Nouveau quizz', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'Voir quizz', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Chercher un quizz', 'bonestheme' ), /* Search Custom Type Title */
+			'not_found' =>  __( 'Rien a été trouvé en base de donnée.', 'bonestheme' ), /* This displays if there are no entries yet */
+			'not_found_in_trash' => __( 'Rien a été trouvé dans la corbeille', 'bonestheme' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'L\'ensemble des quizz', 'bonestheme' ), /* Custom Type Description */
+			'public' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 18, /* this is what order you want it to appear in on the left hand side menu */
+			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/post-type-quizz-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'quizz', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'quizz', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title',  'revisions', 'sticky')
+		) /* end of options */
+	); /* end of register post type */
+
+}
+
+// let's create the function for the custom type fromage
+function custom_post_type_astuces() {
+	// creating (registering) the custom type
+	register_post_type( 'astuces', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'Astuces', 'bonestheme' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Astuce', 'bonestheme' ), /* This is the individual type */
+			'all_items' => __( 'Toutes les astuces', 'bonestheme' ), /* the all items menu item */
+			'add_new' => __( 'Ajouter une astuce', 'bonestheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Ajouter une nouvelle astuce', 'bonestheme' ), /* Add New Display Title */
+			'edit' => __( 'Modifier', 'bonestheme' ), /* Edit Dialog */
+			'edit_item' => __( 'Modifier une astuce', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'Nouvelle astuce', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'Voir astuce', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Chercher une astuce', 'bonestheme' ), /* Search Custom Type Title */
+			'not_found' =>  __( 'Rien a été trouvé en base de donnée.', 'bonestheme' ), /* This displays if there are no entries yet */
+			'not_found_in_trash' => __( 'Rien a été trouvé dans la corbeille', 'bonestheme' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'L\'ensemble des astuces', 'bonestheme' ), /* Custom Type Description */
+			'public' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 19, /* this is what order you want it to appear in on the left hand side menu */
+			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/post-type-astuce-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'custom_type', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'custom_type', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', 'revisions', 'sticky')
+		) /* end of options */
+	); /* end of register post type */
+
+}
 // now let's add astuces categories
 register_taxonomy( 'astuces_cat',
 	array('astuces'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
@@ -352,6 +431,10 @@ add_action( 'init', 'custom_post_type_recettes');
 add_action( 'init', 'custom_post_type_fromages');
 
 add_action( 'init', 'custom_post_type_astuces');
+
+add_action( 'init', 'custom_post_type_defis');
+
+add_action( 'init', 'custom_post_type_quizz');
 
 add_action( 'init', 'custom_post_type_slides');
 

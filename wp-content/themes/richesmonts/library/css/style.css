@@ -1483,6 +1483,19 @@ style a page via class
   left: 23%;
   width: 54%;
   background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+.categories-f-r div.hover-tooltip{
+  position: absolute;
+  opacity: 1;
+  background-color: #aaaaaa;
+  padding: 10px 5px;
+  color: #fff;
+  font-size: 13px;
+  max-width: 80%;
+  min-width: 50px;
+  bottom: -30px;
+  left: 20px;
 }
 .categories-f-r div.text-wrapper h1{
   font-size: 36px;
@@ -1815,7 +1828,6 @@ style a page via class
   margin-top: 100px;
 }
 
-
 /* page catégorie fromages, recettes */
 
 /* blog template page */
@@ -2055,6 +2067,253 @@ POSTS & CONTENT STYLES
 }
 .right-panel article:first-child{
   margin-top: 40px;
+}
+.idees-party-page{
+  padding-bottom: 700px;
+}
+.banniere-title{
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0;
+  position: relative;
+  height: 187px;
+}
+.banniere-title img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.idees-party-page h2{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #009fe3;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.party-menu-container{
+    float: right;
+    right: 50%;
+    position: relative;
+    display: block;
+    margin-top: 50px;
+}
+.party-menu{
+  float: right;
+  right: -50%;
+  position: relative;
+  display: block;
+}
+.party-menu li{
+  background-color: #e30613;
+  margin-right: 130px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+}
+.party-menu li a{
+    display: inline-block;
+    width: 190px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 50px;
+}
+.party-menu li:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.party-menu li:last-child{
+  margin-right: 0;
+}
+.banniere-menu{
+  position: relative;
+}
+.banniere-menu .party-menu-container{
+  bottom: 70px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.banniere-menu ul{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.banniere-menu li{
+  display: inline-block;
+  border: 1px solid #fff;
+}
+.idees-party-page h3{
+    text-align: center;
+    margin-top: 5px;
+}
+.liste-defis-background{
+  background: url("../images/background-defis-menu.png");
+  height: 40px;
+  width: 100%;
+  margin-top: 70px;
+  width: 100%;
+  clear: both;
+}
+.liste-defis-container{
+    float: right;
+    right: 50%;
+    position: relative;
+}
+.liste-defis{
+  margin: 0;
+  float: right;
+  right: -50%;
+  position: relative;
+}
+.liste-defis li{
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+.liste-defis li.current{
+  background: #895e32;
+}
+.liste-defis li a{
+  line-height: 40px;
+    display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  text-align: center;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  width: 180px;
+  font-weight: bold;
+}
+.liste-defis li a:hover{
+  background-color: #009fe3;
+  border: 0 1px solid #fff;
+}
+.single-defis .liste-defis-background{
+  margin-top: 20px;
+}
+.game-content{
+  background: #ededed;
+  padding: 15px 20px 50px 20px;
+  width: 720px;
+  margin: 30px auto;
+  border: 1px solid #1caad9;
+}
+.game-content p {
+  color: #000 !important;
+  font-size: 13px !important;
+}
+.game-content h3{
+  color: #000 !important;
+  font-size: 15px !important;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.single-defis .gage{
+  margin-top: 15px;
+  float: right;
+  color: #fff;
+  background: #009fe3;
+  font-weight: bold;
+  padding: 2px 10px;
+  display: block;
+  float: right;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.single-defis .gage:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #fff;
+}
+.single-quizz .game-content h3{
+  color: #575756 !important;
+  font-size: 25px !important;
+  font-weight: 300;
+}
+.single-quizz .game-content h3 .current-num{
+  color: #e30613;
+}
+.single-quizz .game-content h4{
+  color: #1d1d1b;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.single-quizz .game-content ul.propositions{
+  margin-left: 70px;
+}
+.single-quizz .game-content ul.propositions li:before{
+  content: '- '
+}
+.single-quizz .game-content ul.propositions li{
+  color : #9d9d9c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.social-share{
+  width: 270px;
+  margin: 20px auto;
+}
+.social-share li{
+  display: inline-block;
+}
+.social-share li:first-child{
+  margin-right: 20px;
+}
+.social-share li a{
+  background-color: #b9b9b9;
+  width: 122px;
+  height: 30px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 30px;
+  vertical-align: middle;
+}
+.social-share li a:hover{
+  background-color: #999;
+}
+.social-share li a span.facebook-logo, .social-share li a span.twitter-logo{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 25px;
+  margin-top: 3px;
+  float: left;
+}
+.social-share li a span.facebook-logo{
+  background: url('../images/facebook-button.png');
+  background-size: 25px 25px;
+}
+.social-share li a span.twitter-logo{
+  background: url('../images/twitter-button.png');
+  background-size: 25px 25px;
 }
 
 
@@ -2602,6 +2861,60 @@ you can add resource intensive styles.
   .other_same_post_hidder{
     width: 860px;
   }
+  .banniere-menu ul{
+    margin-bottom: 0;
+    margin-top: 0;
+    bottom: 30px;
+  }
+  .banniere-menu li{
+    display: inline-block;
+    border: 1px solid #fff;
+    margin-right: 70px;
+  }
+  .banniere-menu li a{
+    width: 110px;
+    font-size: 15px;
+    line-height: 30px;
+    height: auto;
+    line-height: 40px;
+  }
+  .liste-defis-background{
+    background: none;
+    width: 100%;
+    margin-top: 40px;
+    margin-top: 30px;
+  }
+  .liste-defis-container{
+      float: right;
+      right: 50%;
+      position: relative;
+  }
+  .liste-defis{
+    margin: 0;
+    float: right;
+    right: -50%;
+    position: relative;
+  }
+  .liste-defis li{
+    display: block;
+    text-align: center;
+    margin-right: 10px;
+    background: url('../images/background-defis-menu.png');
+    margin-top: 20px;
+    height: 40px;
+  }
+  .liste-defis li a{
+    line-height: 40px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 180px;
+  }
 
 }
 
@@ -2786,6 +3099,39 @@ you can add resource intensive styles.
   .right-panel{
     margin-bottom: 400px;
   }
+  .idees-party-page h2{
+    font-size: 24px;
+    max-width: 90%;
+  }
+  .party-menu li{
+    display: block;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .party-menu li:first-child{
+    margin-top: 0;
+  }
+  .banniere-menu ul{
+    bottom: -40px;
+  }
+  .banniere-menu li{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .idees-party-page h2 {
+    padding-top: 30px;
+    clear: both;
+  }
+  .single-defis .liste-defis-background {
+    padding-top: 40px;
+  }
+  .single-defis .gage{
+    display: block;
+    width: 180px;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+  }
   .partenaires{
     border-spacing: 15px;
     bottom: 0;
@@ -2841,6 +3187,16 @@ you can add resource intensive styles.
   }
   .wrap {
     width: 760px;
+  }
+
+  .single-quizz .game-content h3{
+    font-size: 18px !important;
+  }
+  .single-quizz .game-content h4{
+    font-size: 14px;
+  }
+  .single-quizz .game-content ul{
+    margin-left: 10px;
   }
 
 }
@@ -2919,6 +3275,9 @@ tweeners.
   .the_post_detail{
     margin-bottom: 250px;
   }
+  .game-content{
+    width: auto;
+  }
 
 
 }
@@ -2939,6 +3298,22 @@ tweeners.
   }
    .other_same_post_hidder{
     width: 150px;
+  }
+  .banniere-menu ul{
+    bottom: 10px;
+  }
+  .banniere-menu li{
+    display: block;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .idees-party-page h2 {
+    padding-top: 0px;
+    margin-top: 0;
+  }
+  .single-defis .liste-defis-background {
+    padding-top: 0;
+    margin-top: 0;
   }
 
 }

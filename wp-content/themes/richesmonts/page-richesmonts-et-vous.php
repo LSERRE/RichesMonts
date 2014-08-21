@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Basic page
+ Template Name: RichesMonts et vous
  *
  * This is your custom page template. You can create as many of these as you need.
  * Simply name is "page-whatever.php" and in add the "Template Name" title at the
@@ -17,7 +17,7 @@
 
 			<div id="content" class="montagneBackground">
 				<div class="container_12">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/banniere-top.png" alt="RichesMonts et vous">
+					<h1 class="banniere-title"><img src="<?php echo get_template_directory_uri(); ?>/library/images/banniere-top-richesmonts-vous.png" alt="RichesMonts et vous"></h1>
 					<section class="content-page grid_8">
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -163,6 +163,13 @@ jQuery(document).ready(function($) {
 
   product_slider();
 
+  $('.categories-f-r > div').on('mouseover', function(){
+    $(this).find('.hover-tooltip').addClass('active');
+  });
+  $('.categories-f-r > div').on('mouseleave', function(){
+    $(this).find('.hover-tooltip').removeClass('active');
+  });
+
 
 
 
